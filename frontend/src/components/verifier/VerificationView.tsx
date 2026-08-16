@@ -187,7 +187,7 @@ Timestamp: ${result.timestamp}`;
             <span className="font-bold">3D Statutory Title Seal</span>
           </div>
 
-          <Hero3DCanvas verdict={result?.verdict} isScanning={isScanning} />
+          <Hero3DCanvas title={inputTitle} verdict={result?.verdict} isScanning={isScanning} />
 
           <div className="absolute bottom-3 inset-x-4 z-10 flex items-center justify-between text-[11px] text-[#564735] bg-[#FAF7F2]/90 backdrop-blur-md px-3.5 py-1.5 rounded-lg border border-[#E8E0D2]">
             <span className="font-mono">
