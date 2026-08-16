@@ -29,45 +29,45 @@ export const LoadingIntro: React.FC<LoadingIntroProps> = ({ onComplete }) => {
           clearInterval(progressInterval);
           return 100;
         }
-        return prev + 2;
+        return prev + 4;
       });
-    }, 55);
+    }, 40);
 
     // Telemetry log timeline
     const t1 = setTimeout(() => {
       setTelemetryText('Analyzing Phonetic Soundex & Lexical Levenshtein Tensors...');
       setTitleIdx(1);
-    }, 800);
+    }, 600);
 
     const t2 = setTimeout(() => {
       setTelemetryText('Cross-Lingual Semantic Concept Matrix: Active...');
       setTitleIdx(2);
-    }, 1500);
+    }, 1100);
 
-    // Phase 2: Jitter & Convergence Shake at 1.8s
+    // Phase 2: Jitter & Convergence Shake at 1.4s
     const t3 = setTimeout(() => {
       setPhase('shaking');
       sound.playJitter();
       setTelemetryText('RESONANCE CONVERGENCE DETECTED • LOCKING EMBEDDINGS');
-    }, 1800);
+    }, 1400);
 
-    // Lock sound at 2.4s
+    // Lock sound at 1.9s
     const t4 = setTimeout(() => {
       sound.playLock();
       setTelemetryText('VERIFICATION HASH VERIFIED • PRGI ACT 2023 COMPLIANT');
-    }, 2400);
+    }, 1900);
 
-    // Phase 3: Zoom In at 2.9s
+    // Phase 3: Zoom In at 2.3s
     const t5 = setTimeout(() => {
       setPhase('zooming');
       sound.playZoom();
-    }, 2900);
+    }, 2300);
 
-    // Complete at 3.7s
+    // Complete at 2.8s
     const t6 = setTimeout(() => {
       setPhase('completed');
       onComplete();
-    }, 3700);
+    }, 2800);
 
     return () => {
       clearInterval(progressInterval);

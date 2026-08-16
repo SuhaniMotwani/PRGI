@@ -1,4 +1,4 @@
-import React, { useRef, useMemo } from 'react';
+import React, { useRef, useMemo, Suspense } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { Float, Text } from '@react-three/drei';
 import * as THREE from 'three';
@@ -37,7 +37,7 @@ function Pure3DTitleText({ title = 'Times India', verdict, isScanning }: ScenePr
       };
     }
     return {
-      primaryColor: '#292524', // Deep Stone Charcoal / Espresso
+      primaryColor: '#1C1917', // Rich Espresso Black
       emissiveColor: '#B45309', // Warm Bronze Glow
       glowColor: '#D97706'
     };
@@ -70,7 +70,6 @@ function Pure3DTitleText({ title = 'Times India', verdict, isScanning }: ScenePr
 
     // Silky-smooth, slow-moving laser scan sweeping vertically across text
     if (scanLaserRef.current) {
-      // Smooth sinusoidal cycle with slow frequency (~3.5 second period)
       scanLaserRef.current.position.y = Math.sin(t * 1.4) * 0.85;
       scanLaserRef.current.rotation.z = Math.sin(t * 0.7) * 0.03;
     }
@@ -78,7 +77,7 @@ function Pure3DTitleText({ title = 'Times India', verdict, isScanning }: ScenePr
 
   return (
     <group position={[0, 0, 0]}>
-      {/* Pure 3D Floating & Spinning Text Entity (No background plates or bulky cards) */}
+      {/* Pure 3D Floating & Spinning Text Entity */}
       <Float speed={1.2} rotationIntensity={0.15} floatIntensity={0.25}>
         <group ref={groupRef}>
           {/* Front Face 3D Text */}
@@ -90,7 +89,6 @@ function Pure3DTitleText({ title = 'Times India', verdict, isScanning }: ScenePr
             textAlign="center"
             anchorX="center"
             anchorY="middle"
-            font="https://fonts.gstatic.com/s/plusjakartasans/v8/LDIbaomQNQcsA88c7O9yZ4KMCoOg4Ko20yygg_Pb.woff"
             outlineWidth={0.012}
             outlineColor="#1C1917"
           >
@@ -114,7 +112,6 @@ function Pure3DTitleText({ title = 'Times India', verdict, isScanning }: ScenePr
             textAlign="center"
             anchorX="center"
             anchorY="middle"
-            font="https://fonts.gstatic.com/s/plusjakartasans/v8/LDIbaomQNQcsA88c7O9yZ4KMCoOg4Ko20yygg_Pb.woff"
             outlineWidth={0.012}
             outlineColor="#1C1917"
           >
@@ -181,7 +178,9 @@ export const Hero3DCanvas: React.FC<SceneProps> = ({ title, verdict, isScanning 
               : '#D97706'
           }
         />
-        <Pure3DTitleText title={title} verdict={verdict} isScanning={isScanning} />
+        <Suspense fallback={null}>
+          <Pure3DTitleText title={title} verdict={verdict} isScanning={isScanning} />
+        </Suspense>
       </Canvas>
     </div>
   );
