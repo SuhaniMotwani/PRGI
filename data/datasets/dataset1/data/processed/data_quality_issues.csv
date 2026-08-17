@@ -1,0 +1,25 @@
+row_index,registration_number,issue_type,details
+15568.0,,MISSING_REGISTRATION,Registration number is missing
+25399.0,,MISSING_REGISTRATION,Registration number is missing
+33144.0,,MISSING_REGISTRATION,Registration number is missing
+33148.0,,MISSING_REGISTRATION,Registration number is missing
+57695.0,,MISSING_REGISTRATION,Registration number is missing
+60186.0,,MISSING_REGISTRATION,Registration number is missing
+82634.0,,MISSING_REGISTRATION,Registration number is missing
+,19897,CONFLICTING_METADATA,2 records share the same registration number but contain different metadata
+,31937,EXACT_DUPLICATE,2 identical source records; one canonical record retained
+,52035,CONFLICTING_METADATA,2 records share the same registration number but contain different metadata
+,54842,EXACT_DUPLICATE,2 identical source records; one canonical record retained
+,65613,EXACT_DUPLICATE,2 identical source records; one canonical record retained
+,CHHHIN/2018/75904,EXACT_DUPLICATE,2 identical source records; one canonical record retained
+,GUJHIN/1999/02163,EXACT_DUPLICATE,2 identical source records; one canonical record retained
+,HARHIN/2022/83409,EXACT_DUPLICATE,2 identical source records; one canonical record retained
+,HARHIN/2022/83416,EXACT_DUPLICATE,2 identical source records; one canonical record retained
+,HARHIN/2022/83423,EXACT_DUPLICATE,2 identical source records; one canonical record retained
+,HARHIN/2022/83426,EXACT_DUPLICATE,2 identical source records; one canonical record retained
+,HARHIN/2022/83427,EXACT_DUPLICATE,2 identical source records; one canonical record retained
+,KARKAN/2022/83447,EXACT_DUPLICATE,2 identical source records; one canonical record retained
+,MPHIN/2023/85056,EXACT_DUPLICATE,2 identical source records; one canonical record retained
+,MPHIN/2023/91077,EXACT_DUPLICATE,2 identical source records; one canonical record retained
+,MPHIN/26/A2523,EXACT_DUPLICATE,2 identical source records; one canonical record retained
+,UPURD/2014/61418,EXACT_DUPLICATE,2 identical source records; one canonical record retained

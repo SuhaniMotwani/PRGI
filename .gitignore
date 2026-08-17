@@ -1,0 +1,45 @@
+# Dependencies
+node_modules/
+frontend/node_modules/
+dist/
+frontend/dist/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment & Editor
+.DS_Store
+.vscode/
+.idea/
+*.local
+
+# Temporary / Scratch
+/tmp/
+.temp/
+
+
+.env
+.env.local
+.env.*.local
+!.env.example
+!**/.env.example
+
+# Python
+venv/
+.venv/
+__pycache__/
+*.pyc
+
+# Model weights / ML artifacts
+*.npy
+*.pt
+*.bin
+models/
+
+# Tooling caches
+.playwright/
+.antigravity/
+agents/cache/
